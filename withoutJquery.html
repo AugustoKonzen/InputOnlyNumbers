@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Only Numbers Without Jquery</title>
+</head>
+<body>
+    <h1>Input Only Numbers Without Jquery</h1>
+    <input type="text" id="input" onkeyup="onlyNumbers(this);">
+
+    <script>
+        function onlyNumbers(num) {
+            var er = /[^0-9.]/;
+            er.lastIndex = 0;
+            var input = num;
+            if (er.test(input.value)) {
+                input.value = input.value.replace(/\D/g, '');
+            }
+        }
+    </script>
+</body>
+</html>
