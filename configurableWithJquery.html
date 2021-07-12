@@ -24,7 +24,7 @@
 		}
 		regex += "\\d+)"
 		if (decimals != null && decimals >= 0 ) {
-			regex += "((\\.{1})((\\d" + (decimals == 0 ? "{0,50}" : "{0," + decimals + "}") + ")?))";
+			regex += "((\\.{1})((\\d" + (decimals == 0 ? "{0,40472}" : "{0," + decimals + "}") + ")?))";
 		}
 		regex += "{0,1})/ig";
 		var aux = valor.match(eval(regex))[0]
